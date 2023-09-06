@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>No11社員情報登録</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <script type="text/javascript" th:src="@{/js/js_No.js}"></script>
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+.center {
+	text-align: center;
+}
+</style>
+<body onload="color1()">
+	<input type="hidden" id="id_red" th:value="${id_point}">
+	<input type="hidden" id="name_red" th:value="${name_point}">
+	<form action="INSERT" method="post" name="No">
+	<div style="padding:background-color: #FFFFFF; width:500px; text-align: center;">
+		<br><br>利用者情報入力欄<br><br><br> 図書カード番号と利用者氏名を入力して下さい<br><br><br> <span th:if="${key03}">
+			<font color="red">
+				<td th:text="${key040}"></td>
+			<br>
+				<td th:text="${key041}"></td>
+			<br>
+			<br>
+		</font>
+		</span> 図書カード番号:<input type="text" name="syainID" id="syainID"
+			onchange="active('INSERT')" th:value="${key01}"><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			利用者氏名:<input type="text" name="syainNAME" id="syainNAME"
+			onchange="active('INSERT')" th:value="${key02}"><br><br><br><br>
+			<input type="button" value="次へ" id="INSERT" onclick="chg(this.id)" disabled> <br></div>
+			
+	</form>
+	<br>
+</body>
+</html>

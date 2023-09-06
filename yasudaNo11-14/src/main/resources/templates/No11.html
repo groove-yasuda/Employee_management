@@ -14,6 +14,7 @@
 	<input type="hidden" id="id_red" th:value="${id_point}">
 	<input type="hidden" id="name_red" th:value="${name_point}">
 	<form action="INSERT" method="post" name="No">
+		<div style="padding:background-color: #FFFFFF; width:300px; text-align: center;">
 		社員情報登録画面<br> 登録したい情報を入力して下さい<br> <span th:if="${key03}">
 			<font color="red">
 				<td th:text="${key040}"></td>
@@ -29,7 +30,7 @@
 		社員名:<input type="text" name="syainNAME" id="syainNAME"
 			onchange="active('INSERT')" th:value="${key02}"><br>
 		社員名を255文字以内で入力して下さい<br> <input type="button" value="登録"
-			id="INSERT" onclick="chg(this.id)" disabled> <br>
+			id="INSERT" onclick="chg(this.id)" disabled> <br></div>
 	</form>
 	<br>
 	<form action="IDOU" method="post">
